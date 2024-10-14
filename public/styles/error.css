@@ -1,0 +1,10 @@
+main {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+#back-btn {
+  margin-top: var(--space-4);
+}
