@@ -3,9 +3,12 @@
   <nav>
     <ul>
       <% if(locals.isAuth) { %>
-        <li>
-         <button>Log Out</button>
-        </li>
+      <li>
+        <form action="/logout" method="POST">
+          <input type="hidden" name="_csrf" value="<%= locals.csrfToken %>">
+          <button>Log Out</button>
+        </form>
+      </li>
       <% } %>
       <li></li>
       <li></li>

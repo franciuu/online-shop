@@ -3,6 +3,11 @@ function createUserSession(req, user, action) {
   req.session.save(action);
 }
 
+function destoryUserAuthSession(req) {
+  req.session.uid = null;
+}
+
 module.exports = {
   createUserSession: createUserSession,
+  destoryUserAuthSession: destoryUserAuthSession
 };
